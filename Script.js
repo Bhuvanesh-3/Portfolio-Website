@@ -1,25 +1,7 @@
-const canvas = document.getElementById("signatureCanvas");
-const ctx = canvas.getContext("2d");
-
-function generateSignature() {
-  const name = document.getElementById("nameInput").value;
-  const color = document.getElementById("colorPicker").value;
-
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  ctx.font = "48px cursive";
-  ctx.fillStyle = color;
-  ctx.textAlign = "center";
-  ctx.fillText(name, canvas.width / 2, canvas.height / 2 + 15);
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-function clearCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-function downloadSignature() {
-  const link = document.createElement("a");
-  link.download = "signature.png";
-  link.href = canvas.toDataURL("image/png");
-  link.click();
-}
+document.getElementById("darkToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
