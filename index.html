@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signature Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Signature Generator</h1>
+
+    <input
+      type="text"
+      id="nameInput"
+      placeholder="Enter your name"
+    />
+
+    <input type="color" id="colorPicker" />
+
+    <canvas id="signatureCanvas" width="400" height="150"></canvas>
+
+    <div class="buttons">
+      <button onclick="generateSignature()">Generate</button>
+      <button onclick="clearCanvas()">Clear</button>
+      <button onclick="downloadSignature()">Download</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
